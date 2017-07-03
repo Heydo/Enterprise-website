@@ -276,6 +276,7 @@ body {
     height: 200px;
     background-color: #e8e8e8;
     margin-top: 10px;
+    clear: both;
 }
 .copyright_content {
     width: 1000px;
@@ -300,7 +301,8 @@ body {
     font-size: 14px;
 }
 .list_main {
-    height: 3350px;
+    min-height: 350px;
+    _height: 350px;
     background-color: #ffffff;
     margin-top: 10px;
 }
@@ -308,13 +310,96 @@ body {
     width: 220px;
     height: 350px;
     border: 1px solid #e8e8e8;
-    background-color: #9fc;
     float: left;
 }
 .list_box {
     width: 770px;
-    height: 350px;
-    background-color: #f9f;
+    min-height: 350px;  /*min-height属性在 IE 6 中不支持*/
+    /*对IE 6 的hack*/
+    _height: 350px;/*IE 6 的内容会自动撑开*/
+    /*background-color: #f9f;*/
     border: 1px solid #e8e8e8;
     float: right;
+    background-color: white;
+}
+.news_type h2 {
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    font-family: 微软雅黑;
+    color: #666;
+    background: url("../image/titile_bg.gif") repeat-x;
+    padding-left: 20px;
+}
+.news_type_content {
+    height: 365px;
+    background: url("../image/content_bg.gif") repeat-x;
+}
+.news_type_content li {
+    list-style-type: none;
+    height: 30px;
+    line-height: 30px;
+}
+.news_type_content li a {
+    color: #666666;
+    text-decoration: none;
+    background:url("../image/li_bg.gif")  no-repeat left center;
+    padding-left: 15px;
+    display: block;
+}
+.news_type_content li a:hover{
+    color: #009cdf;
+    background: url("../image/li_bg2.gif") no-repeat left center;
+    background-color: #f2f2f2;
+}
+.list_box h2 {
+    font-size: 14px;
+    font-family: 微软雅黑;
+    color: #666666;
+    height: 35px;
+    line-height: 35px;
+    background: url("../image/type_bg.png") repeat-x;
+    padding-left: 20px;
+}
+
+.page {
+    height: 40px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.page a {
+    border: 1px solid #e8e8e8;
+    text-decoration: none;
+    margin: 5px;
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+.page a:link,.page a:visited {
+    color: #000000;
+}
+.page a:hover,.page a:active {
+    color: #ffffff;
+    background-color: #cc1b1b;
+}
+
+.list_box h1 {
+    font-family: 微软雅黑;
+    font-size: 20px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.list_box_newsInfo {
+    color: #666666;
+    text-align: center;
+    border-bottom: 1px dotted #666;
+
+}
+.list_box_newsContent {
+    font-size: 14px;
+    padding: 20px;
+    line-height: 25px;
+    text-indent: 2em;
 }
